@@ -26,7 +26,9 @@ Below is the EBNF grammar for the LanGU programming language:
 &lt;print_statement&gt; ->    "print" "(" &lt;expr&gt; ")" ";"
 
 &lt;logic_expr&gt;      ->    &lt;rel_expr&gt; { ( "&&" | "||" ) &lt;rel_expr&gt; } | "(" &lt;logic_expr&gt; ")"
+
 &lt;rel_expr&gt;        ->    &lt;expr&gt; &lt;rel_op&gt; &lt;expr&gt;
+
 &lt;rel_op&gt;          ->    "==" | "!=" | ">" | "<" | ">=" | "&lt;="
 
 &lt;expr&gt;            ->    &lt;term&gt; { ( "+" | "-" ) &lt;term&gt; }
