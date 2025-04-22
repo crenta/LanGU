@@ -34,6 +34,7 @@ Below is the EBNF grammar for the LanGU programming language:
 <term>            ->    <factor> { ("*" | "/" | "%") <factor> }
 <factor>          ->    "-" <factor> | <var> | <INT_LIT> | <STRING_LIT> | "(" <expr> ")"
 <var>             ->    <IDENT>
+```
 
 
 
