@@ -42,8 +42,8 @@ Below is the EBNF grammar for the LanGU programming language:
 - **AST_Tree.py:** Defines the AST node structure and provides utilities for printing the AST.
 - **semantics.py:** Performs semantic analysis on the AST, checking for issues such as undeclared or unused variables.
 - **Interpreter.py:** Evaluates the AST to execute the program. It also supports step-by-step interpretation.
-- **LanGU.py:** Provides the GUI for the interpreter.
-- **program1.txt / program2.txt:** Sample programs for testing the interpreter.
+- **LanGU.py:** Provides the GUI.
+- **program1.txt / program2.txt:** Sample programs for testing.
 
 
 ## How to Run
