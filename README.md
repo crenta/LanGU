@@ -90,8 +90,10 @@ Below is the EBNF grammar for the LanGU programming language:
    - `semantics.py`
 
 2. **Compile the EXE**
-    - Windows     --> open a terminal in the folder, run `<pyinstaller --onefile --windowed --add-data "program1.txt;." --add-data "program2.txt;." LanGU.py>`
-    - Linux/MacOS --> open a terminal in the folder, run `<pyinstaller --onefile --windowed --add-data "program1.txt:." --add-data "program2.txt:." LanGU.py>`
+    - Windows     --> open a terminal in the folder, run
+        - `<pyinstaller --onefile --windowed --add-data "program1.txt;." --add-data "program2.txt;." LanGU.py>`
+    - Linux/MacOS --> open a terminal in the folder, run
+        - `<pyinstaller --onefile --windowed --add-data "program1.txt:." --add-data "program2.txt:." LanGU.py>`
         - Note: The --windowed flag may hide the console on MacOS
 
 4. **Run the File**
