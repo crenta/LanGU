@@ -15,6 +15,7 @@ Below is the EBNF grammar for the LanGU programming language:
 &lt;program&gt;         ->    "program" &lt;statements&gt; "end_program"
 
 &lt;statements&gt;      ->    { &lt;statement&gt; }
+
 &lt;statement&gt;       ->    &lt;assignment&gt; | &lt;if_statement&gt; | &lt;loop_statement&gt; | &lt;print_statement&gt;
 
 &lt;assignment&gt;      ->    &lt;var&gt; "=" &lt;expr&gt; ";"
@@ -32,8 +33,11 @@ Below is the EBNF grammar for the LanGU programming language:
 &lt;rel_op&gt;          ->    "==" | "!=" | ">" | "<" | ">=" | "&lt;="
 
 &lt;expr&gt;            ->    &lt;term&gt; { ( "+" | "-" ) &lt;term&gt; }
+
 &lt;term&gt;            ->    &lt;factor&gt; { ( "*" | "/" | "%" ) &lt;factor&gt; }
+
 &lt;factor&gt;          ->    "-" &lt;factor&gt; | &lt;var&gt; | &lt;INT_LIT&gt; | &lt;STRING_LIT&gt; | "(" &lt;expr&gt; ")"
+
 &lt;var&gt;             ->    &lt;IDENT&gt;
 
 
