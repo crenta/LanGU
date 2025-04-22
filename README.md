@@ -12,33 +12,28 @@ This project implements a simple interpreter for the **LanGU** programming langu
 
 Below is the EBNF grammar for the LanGU programming language:
 
-&lt;program&gt;         ->    "program" &lt;statements&gt; "end_program"
+## Grammar
 
-&lt;statements&gt;      ->    { &lt;statement&gt; }
+```bnf
+<program>         ->    "program" <statements> "end_program"
 
-&lt;statement&gt;       ->    &lt;assignment&gt; | &lt;if_statement&gt; | &lt;loop_statement&gt; | &lt;print_statement&gt;
+<statements>      ->    { <statement> }
+<statement>       ->    <assignment> | <if_statement> | <loop_statement> | <print_statement>
 
-&lt;assignment&gt;      ->    &lt;var&gt; "=" &lt;expr&gt; ";"
+<assignment>      ->    <var> "=" <expr> ";"
 
-&lt;if_statement&gt;    ->    "if" "(" &lt;logic_expr&gt; ")" &lt;statements&gt; "end_if"
+<if_statement>    ->    "if" "(" <logic_expr> ")" <statements> "end_if"
+<loop_statement>  ->    "loop" "(" <var> "=" (<INT_LIT> | <var>) ":" (<INT_LIT> | <var>) ")" <statements> "end_loop"
+<print_statement> ->    "print" "(" <expr> ")" ";"
 
-&lt;loop_statement&gt;  ->    "loop" "(" &lt;var&gt; "=" ( &lt;INT_LIT&gt; | &lt;var&gt; ) ":" ( &lt;INT_LIT&gt; | &lt;var&gt; ) ")" &lt;statements&gt; "end_loop"
+<logic_expr>      ->    <rel_expr> { ("&&" | "||") <rel_expr> } | "(" <logic_expr> ")"
+<rel_expr>        ->    <expr> <rel_op> <expr>
+<rel_op>          ->    "==" | "!=" | ">" | "<" | ">=" | "<="
 
-&lt;print_statement&gt; ->    "print" "(" &lt;expr&gt; ")" ";"
-
-&lt;logic_expr&gt;      ->    &lt;rel_expr&gt; { ( "&&" | "||" ) &lt;rel_expr&gt; } | "(" &lt;logic_expr&gt; ")"
-
-&lt;rel_expr&gt;        ->    &lt;expr&gt; &lt;rel_op&gt; &lt;expr&gt;
-
-&lt;rel_op&gt;          ->    "==" | "!=" | ">" | "<" | ">=" | "&lt;="
-
-&lt;expr&gt;            ->    &lt;term&gt; { ( "+" | "-" ) &lt;term&gt; }
-
-&lt;term&gt;            ->    &lt;factor&gt; { ( "*" | "/" | "%" ) &lt;factor&gt; }
-
-&lt;factor&gt;          ->    "-" &lt;factor&gt; | &lt;var&gt; | &lt;INT_LIT&gt; | &lt;STRING_LIT&gt; | "(" &lt;expr&gt; ")"
-
-&lt;var&gt;             ->    &lt;IDENT&gt;
+<expr>            ->    <term> { ("+" | "-") <term> }
+<term>            ->    <factor> { ("*" | "/" | "%") <factor> }
+<factor>          ->    "-" <factor> | <var> | <INT_LIT> | <STRING_LIT> | "(" <expr> ")"
+<var>             ->    <IDENT>
 
 
 
