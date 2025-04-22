@@ -12,25 +12,25 @@ This project implements a simple interpreter for the **LanGU** programming langu
 
 Below is the EBNF grammar for the LanGU programming language:
 
-<program>         ->    "program" <statements> "end_program"
+<program> ->    "program" <statements> "end_program"
 
-<statements>      ->    { <statement> }
-<statement>       ->    <assignment> | <if_statement> | <loop_statement> | <print_statement>
+<statements> ->    { <statement> }
+<statement> ->    <assignment> | <if_statement> | <loop_statement> | <print_statement>
 
-<assignment>      ->    <var> "=" <expr> ";"
+<assignment> ->    <var> "=" <expr> ";"
 
-<if_statement>    ->    "if" "(" <logic_expr> ")" <statements> "end_if"
-<loop_statement>  ->    "loop" "(" <var> "=" (<INT_LIT> | <var>) ":" (<INT_LIT> | <var>) ")" <statements> "end_loop"
+<if_statement> ->    "if" "(" <logic_expr> ")" <statements> "end_if"
+<loop_statement> ->    "loop" "(" <var> "=" (<INT_LIT> | <var>) ":" (<INT_LIT> | <var>) ")" <statements> "end_loop"
 <print_statement> ->    "print" "(" <expr> ")" ";"
 
-<logic_expr>      ->    <rel_expr> { ("&&" | "||") <rel_expr> } | "(" <logic_expr> ")"
-<rel_expr>        ->    <expr> <rel_op> <expr>
-<rel_op>          ->    "==" | "!=" | ">" | "<" | ">=" | "<="
+<logic_expr> ->    <rel_expr> { ("&&" | "||") <rel_expr> } | "(" <logic_expr> ")"
+<rel_expr> ->    <expr> <rel_op> <expr>
+<rel_op> ->    "==" | "!=" | ">" | "<" | ">=" | "<="
 
-<expr>            ->    <term> { ("+" | "-") <term> }
-<term>            ->    <factor> { ("*" | "/" | "%") <factor> }
-<factor>          ->    "-" <factor> | <var> | <INT_LIT> | <STRING_LIT> | "(" <expr> ")"
-<var>             ->    <IDENT>
+<expr> ->    <term> { ("+" | "-") <term> }
+<term> ->    <factor> { ("*" | "/" | "%") <factor> }
+<factor> ->    "-" <factor> | <var> | <INT_LIT> | <STRING_LIT> | "(" <expr> ")"
+<var> ->    <IDENT>
 
 
 
