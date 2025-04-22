@@ -11,9 +11,6 @@ This project implements a simple interpreter for the **LanGU** programming langu
 ## EBNF Grammar
 
 Below is the EBNF grammar for the LanGU programming language:
-
-## Grammar
-
 ```bnf
 <program>         ->    "program" <statements> "end_program"
 
