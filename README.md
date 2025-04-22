@@ -51,7 +51,7 @@ Below is the EBNF grammar for the LanGU programming language:
 **Requirements**
 - Python
 
-## Option 1 - Download the EXE (Windows x64)
+## Option 1 - Download the EXE (***Windows x64 only***)
     - Download the EXE file
 
 ## Option 2 – Using an IDE
