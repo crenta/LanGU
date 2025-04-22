@@ -1,0 +1,33 @@
+program  
+a = 10;
+b = 5;
+print(a);
+print(b);
+print(a + b);
+
+// arithmetic and logic operations
+sum = a + b;
+diff = a - b;
+prod = a * b;
+quot = a / b;
+modResult = a % b;
+
+// loop operation
+loop (counter = 1 : 3)
+    sum = sum + counter;
+end_loop
+
+// nested if condition
+if (sum > 20 && diff < 10)
+    result = sum * diff;
+    if (result >= 100)
+        finalValue = result / 2;
+    end_if
+end_if
+end_program
+
+
+// sum        = initially(15) + loop(1+2+3) ==> 21
+// counter    = last loop iteration value   ==> 3
+// result     = sum(21) * diff(5)           ==> 105
+// finalValue = result(105) / 2             ==> 52
