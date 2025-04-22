@@ -12,7 +12,7 @@ This project implements a simple interpreter for the **LanGU** programming langu
 
 Below is the EBNF grammar for the LanGU programming language:
 
-<program> > "program" <statements> "end_program"
+<program> --- "program" <statements> "end_program"
 
 
 ## Project Structure
