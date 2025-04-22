@@ -20,7 +20,9 @@ Below is the EBNF grammar for the LanGU programming language:
 &lt;assignment&gt;      ->    &lt;var&gt; "=" &lt;expr&gt; ";"
 
 &lt;if_statement&gt;    ->    "if" "(" &lt;logic_expr&gt; ")" &lt;statements&gt; "end_if"
+
 &lt;loop_statement&gt;  ->    "loop" "(" &lt;var&gt; "=" ( &lt;INT_LIT&gt; | &lt;var&gt; ) ":" ( &lt;INT_LIT&gt; | &lt;var&gt; ) ")" &lt;statements&gt; "end_loop"
+
 &lt;print_statement&gt; ->    "print" "(" &lt;expr&gt; ")" ";"
 
 &lt;logic_expr&gt;      ->    &lt;rel_expr&gt; { ( "&&" | "||" ) &lt;rel_expr&gt; } | "(" &lt;logic_expr&gt; ")"
