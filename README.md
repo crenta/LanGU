@@ -50,7 +50,6 @@ Below is the EBNF grammar for the LanGU programming language:
 
 **Requirements**
 - Python
-- Pyinstaller (for EXE)
 
 ## Option 1 - Download the EXE (Windows x64)
     - Download the EXE file
